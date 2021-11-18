@@ -1,0 +1,241 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "vip",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#booleans"
+		},
+		{
+
+			"include": "#numbers"
+
+		},
+		{
+
+			"include": "#operators"
+		},
+		{
+			"include": "#functions"
+		},
+		{
+			"include": "#identifiers"
+		},
+		{
+
+            "include": "#comments"
+
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#strings-inline"
+		},
+        {
+          "include": "#punctuation"
+		}
+	],
+	"repository": {
+		"comments": {
+
+			"patterns": [
+
+				{
+
+					"name": "comment.block.vip",
+
+					"begin": "/\\*",
+
+					"end": "\\*/"
+
+				},
+
+				{
+
+					"name": "comment.line.double-slash",
+
+					"begin": "//",
+
+					"end": "\\n"
+
+				}
+
+			]
+
+		},
+		"functions": {
+
+			"patterns": [
+
+				{
+
+					"name": "entity.name.function",
+		
+					"match": "\\b([A-Za-z_][A-Za-z_0-9-]*)\\("
+
+				}
+
+			]
+
+		},
+		"keywords": {
+
+			"patterns": [
+
+				{
+
+					"match": "(?<!\\$)\\b(using|assign|break|case|continue|default|do|else|for|if|when|in|return|switch|while)\\b(?!\\$)",
+
+					"name": "keyword.control.vip"
+
+				},
+
+
+				{
+
+					"match": "\\b(function|class|enum|extends|depends)\\b",
+
+					"name": "keyword.declaration.vip"
+
+				}
+
+
+			]
+		},
+		"booleans": {
+
+			"patterns": [
+
+				{
+
+					"name": "constant.language.vip",
+
+					"match": "\\b(true|false)\\b"
+
+				}
+
+			]
+
+		},
+
+		"numbers": {
+
+			"patterns": [
+
+				{
+
+					"name": "constant.numeric.vip",
+
+					"match": "\\b[0-9]+\\b"
+
+				}
+
+			]
+
+		},
+		"operators": {
+
+			"patterns": [
+
+				{
+
+					"name": "keyword.operator.vip",
+
+					"match": "\\b(&|=>|<=|!|#|=|/=|\\||\\/|/\\\\|-|\\|->|\\*|.|:|/:|<:|/<:|<<:|/<<:|\\+|/|\\.\\.|>|<|>=|<=|<->|;|<\\||<<\\||\\|>|\\|>>|~|<\\+|\\+>|><|\\|\\||\\+->|-->|>\\+>|>->|\\+->>|>->>|%|\\^|\\[\\]|@)\\b"
+
+				},
+
+				{
+
+					"name": "keyword.control.vip",
+
+					"match": "\\b(to|as|then)\\b"
+
+				}
+
+			]
+
+		},
+		"identifiers": {
+
+			"patterns": [
+
+				{
+
+					"name": "support.type.vip",
+					"match": "\\b(float|string|integer|int)\\b"
+				},
+
+				{
+
+					"name": "support.variable.vip",
+
+					"match": "\\b[a-z_-][a-zA-Z_0-9-]*\\b"
+
+				}
+
+			]
+
+		},
+
+		"strings": {
+			"name": "string.quoted.double.single.vip",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.vip",
+					"match": "\\\\."
+				}
+			]
+		},
+		"strings-inline": {
+			"name": "string.quoted.double.single.vip",
+			"begin": "\\'",
+			"end": "\\'",
+			"patterns": [
+				{
+					"name": "constant.character.escape.vip",
+					"match": "\\\\."
+				}
+			]
+		},
+		"punctuation": {
+
+			"patterns": [
+
+				{
+
+					"match": ",",
+
+					"name": "punctuation.comma.vip"
+
+				},
+
+				{
+
+					"match": ";",
+
+					"name": "punctuation.terminator.vip"
+
+				},
+
+				{
+
+					"match": "\\.",
+
+					"name": "punctuation.dot.vip"
+
+				}
+
+			]
+
+		}
+		
+	},
+	
+	"scopeName": "source.vp"
+}

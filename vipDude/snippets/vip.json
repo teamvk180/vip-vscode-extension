@@ -1,0 +1,112 @@
+{
+
+    "Class": {
+
+        "prefix": "class",
+
+        "body": ["class ${1:Name} {", "\t$0", "}"],
+
+        "description": "Creates the boilerplate for a normal class." 
+
+    },
+
+    "Function": {
+
+        "prefix": "function",
+
+        "body": ["function ${1:name} \n {", "\t$0", "}"],
+
+        "description": "Creates the boilerplate of a function."
+
+    },
+
+    "return": {
+
+        "prefix": "return",
+
+        "body": ["return"],
+
+        "description": "Ends function execution."
+
+    },
+
+    "init": {
+
+        "prefix": "init",
+
+        "body": ["init()\n"]
+
+    },
+    "depends": {
+
+        "prefix": "depends",
+
+        "body": [" ${0:depends} ${1:name}"],
+
+        "description": "Creates the boilerplate for depends" 
+    },
+    "extends": {
+
+        "prefix": "extends",
+
+        "body": [" ${0:extends} ${1:name}"],
+
+        "description": "Creates the boilerplate for extends" 
+    },
+
+    "abs": {
+
+        "prefix": "abs()",
+
+        "body": ["abs(int ${1:x})"],
+
+        "description": "The `abs()` function returns the absolute value of a number"
+
+    },
+
+    "multiply": {
+
+        "prefix": "multiply()",
+
+        "body": ["multiply(int ${1:x}, int ${2:y})"]
+
+        
+
+    },
+    "if" : {
+        "prefix": "if",
+
+        "body": ["if $1 ","{","\t$0", "}"],
+
+        "description": "Creates the boilerplate for an if." 
+    },
+    "else" : {
+        "prefix": "else",
+
+        "body": ["else ","{","\t$0", "}"],
+
+        "description": "Creates the boilerplate for an else." 
+    },
+    "else if" : {
+        "prefix": "else if",
+
+        "body": ["else if $1 ","{","\t$0", "}"],
+
+        "description": "Creates the boilerplate for an else if." 
+    },
+    "while" : {
+        "prefix": "while",
+
+        "body": ["while $1 ","{","\t$0", "}"],
+
+        "description": "Creates the boilerplate for an while." 
+    },
+    "when" : {
+        "prefix": "when",
+
+        "body": ["when $1 ","{","\t$0", "}"],
+
+        "description": "Creates the boilerplate for an if." 
+    }
+
+}

@@ -1,0 +1,77 @@
+{
+    "name": "vipDude",
+    "displayName": "vipLanguageExtensionPack",
+    "description": "virtual interface programming language ",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.55.0"
+    },
+    "categories": [
+        "Programming Languages",
+        "Snippets",
+
+        "Extension Packs",
+
+        "Language Packs",
+
+        "Themes"
+    ],
+    
+    "galleryBanner": {
+      "color": "#00c8af",
+      "theme": "dark"
+    },
+
+    "contributes": {
+        "languages": [
+        {
+            "id": "vip",
+            "aliases": ["vip", "vip"],
+            "extensions": [".vp"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "vip",
+            "scopeName": "source.vp",
+            "path": "./syntaxes/vip.tmLanguage.json"
+          }],
+
+        "snippets": [
+          {
+            "language": "vip",
+            "path": "./snippets/vip.json"
+          }
+        ],
+        "themes": [
+
+          {
+
+              "label": "vip Official",
+
+              "uiTheme": "vs",
+
+              "path": "./themes/vip-second-theme.json"
+
+          }
+
+      ],
+        "semanticTokenTypes": [
+            {
+              "id": "templateType",
+              "superType": "type",
+              "description": "A template type."
+            }
+          ],
+          "semanticTokenModifiers": [
+            {
+              "id": "native",
+              "description": "Annotates a symbol that is implemented natively"
+            }
+          ],
+          "configurationDefaults": {
+            "[languageId]": {
+              "editor.semanticHighlighting.enabled": true
+            }
+          }
+    }
+}
